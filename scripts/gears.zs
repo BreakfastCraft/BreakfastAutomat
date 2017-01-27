@@ -1,3 +1,6 @@
+import mods.immersiveengineering.MetalPress;
+
+print("Gear related recipes start");
 
 var TitaniumGear = <libvulpes:productgear:7>;
 var AluminideGear = <advancedrocketry:productgear:0>;
@@ -20,13 +23,18 @@ var SteelGear = <substratum:gear:12>;
 var LeadGear = <substratum:gear:13>;
 var AlumGear = <substratum:gear:19>;
 
+var FBronzeGear = <forestry:gearBronze>;
+var FCopperGear = <forestry:gearCopper>;
+var FTinGear = <forestry:gearTin>;
+var ARSteelGear = <libvulpes:productgear:6>;
 
 var tool = <immersiveengineering:tool>;
 var cobble = <minecraft:cobblestone>;
+var moldGear= <immersiveengineering:mold:1>;
 
 //***
 //--- REMOVE GEARS ---
-//
+//***
 
 recipes.remove(<ore:gearTin>);
 recipes.remove(<ore:gearCopper>);
@@ -38,10 +46,20 @@ recipes.remove(TitaniumGear);
 recipes.remove(IridiumGear);
 recipes.remove(AluminideGear);
 
+//***
+//--- REMOVE METAL PRESS RECIPES Unidict does some odd things and adds all the recipes with a single ingot.---
+//***
+
+MetalPress.removeRecipe(FBronzeGear);
+MetalPress.removeRecipe(FCopperGear);
+MetalPress.removeRecipe(FTinGear);
+MetalPress.removeRecipe(ARSteelGear);
+
 
 //***
 //-- ADD MANUAL RECIPES ---
 //***
+
 recipes.addShaped(WoodenGear,[[<ore:stickTreatedWood>, null,<ore:stickTreatedWood>],[null, <ore:plankTreatedWood>,null],[<ore:stickTreatedWood>, null,<ore:stickTreatedWood>]]);
 recipes.addShaped(StoneGear,[[cobble, null,cobble],[null, <ore:gearWood>,null],[cobble, null,cobble]]);
 recipes.addShaped(IronGear,[[<ore:stickIron>, null,<ore:stickIron>],[null, <ore:gearStone>,null],[<ore:stickIron>, null,<ore:stickIron>]]);
@@ -60,6 +78,29 @@ recipes.addShaped(BrassGear,[[<ore:stickBrass>, null,<ore:stickBrass>],[null, <o
 recipes.addShaped(SilverGear,[[<ore:stickSilver>, null,<ore:stickSilver>],[null, <ore:gearIron>,null],[<ore:stickSilver>, null,<ore:stickSilver>]]);
 recipes.addShaped(LeadGear,[[<ore:stickLead>, null,<ore:stickLead>],[null, <ore:gearIron>,null],[<ore:stickLead>, null,<ore:stickLead>]]);
 
-recipes.addShaped(TitaniumGear,[[<ore:stickTitanium>, null,<ore:stickTitanium>],[null, <ore:plateAluminum>,null],[<ore:stickTitanium>, null,<ore:stickTitanium>]]);
-recipes.addShaped(AluminideGear,[[<ore:stickTitaniumAluminide>, null,<ore:stickTitaniumAluminide>],[null, <ore:plateTitanium>,null],[<ore:stickTitaniumAluminide>, null,<ore:stickTitaniumAluminide>]]);
-recipes.addShaped(IridiumGear,[[<ore:stickTitaniumIridium>, null,<ore:stickTitaniumIridium>],[null, <ore:plateTitanium>,null],[<ore:stickTitaniumIridium>, null,<ore:stickTitaniumIridium>]]);
+recipes.addShaped(TitaniumGear,[[<ore:stickTitanium>, null,<ore:stickTitanium>],[null, <ore:gearAluminum>,null],[<ore:stickTitanium>, null,<ore:stickTitanium>]]);
+recipes.addShaped(AluminideGear,[[<ore:stickTitaniumAluminide>, null,<ore:stickTitaniumAluminide>],[null, <ore:gearTitanium>,null],[<ore:stickTitaniumAluminide>, null,<ore:stickTitaniumAluminide>]]);
+recipes.addShaped(IridiumGear,[[<ore:stickTitaniumIridium>, null,<ore:stickTitaniumIridium>],[null, <ore:gearTitanium>,null],[<ore:stickTitaniumIridium>, null,<ore:stickTitaniumIridium>]]);
+
+//***
+//--- ADD METAL PRESS RECIPES ---
+//***
+
+MetalPress.addRecipe(IronGear , <ore:ingotIron>, moldGear, 500, 4);
+MetalPress.addRecipe(CopperGear , <ore:ingotCopper>, moldGear, 500, 4);
+MetalPress.addRecipe(SteelGear , <ore:ingotSteel>, moldGear, 500, 4);
+MetalPress.addRecipe(AlumGear , <ore:ingotAluminum>, moldGear, 500, 4);
+MetalPress.addRecipe(GoldGear , <ore:ingotGold>, moldGear, 500, 4);
+MetalPress.addRecipe(TinGear , <ore:ingotTin>, moldGear, 500, 4);
+MetalPress.addRecipe(BronzeGear , <ore:ingotBronze>, moldGear, 500,4);
+
+MetalPress.addRecipe(InvarGear , <ore:ingotInvar>, moldGear, 500, 4);
+MetalPress.addRecipe(ElectrumGear , <ore:ingotElectrum>, moldGear, 500, 4);
+MetalPress.addRecipe(NickelGear , <ore:ingotNickel>, moldGear, 500, 4);
+MetalPress.addRecipe(ZincGear , <ore:ingotZinc>, moldGear, 500, 4);
+MetalPress.addRecipe(BrassGear , <ore:ingtoBrass>, moldGear, 500, 4);
+MetalPress.addRecipe(SilverGear , <ore:ingtoSilver>, moldGear, 500, 4);
+MetalPress.addRecipe(LeadGear , <ore:ingtoLead>, moldGear, 500, 4);
+
+
+print("Gear related recipes end");

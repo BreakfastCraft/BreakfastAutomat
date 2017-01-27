@@ -5,6 +5,10 @@ var ARCopperRod =  <libvulpes:productrod:4>;
 var ARSteelRod =  <libvulpes:productrod:6>;
 var ARTitaniumRod =  <libvulpes:productrod:7>;
 
+var IEIronRod = <immersiveengineering:material:1>;
+var IESteelRod = <immersiveengineering:material:2>;
+var IEAlumRod = <immersiveengineering:material:3>;
+
 var ARIridiumRod =  <advancedrocketry:productrod:0>;
 var ARAluminideRod =  <advancedrocketry:productrod:1>;
 
@@ -24,6 +28,7 @@ var LeadRod = <substratum:rod:12>;
 var AlumRod = <substratum:rod:18>;
 
 var tool = <immersiveengineering:tool>;
+var moldRod = <immersiveengineering:mold:2>;
 
 //***
 //--- REMOVE RODS ---///
@@ -34,15 +39,27 @@ recipes.remove(<ore:stickCopper>);
 recipes.remove(<ore:stickSteel>);
 recipes.remove(<ore:stickAluminum>);
 
-recipes.remove(<libvulpes:productrod:7>);
+recipes.remove(ARIronRod);
+recipes.remove(ARCopperRod);
+recipes.remove(ARSteelRod);
+recipes.remove(ARTitaniumRod);
+recipes.remove(ARIridiumRod);
+recipes.remove(ARAluminideRod);
 
-recipes.remove(<advancedrocketry:productrod:0>);
-recipes.remove(<advancedrocketry:productrod:1>);
+//***
+//--- REMOVE METAL PRESS RECIPES ---///
+//***
 
-recipes.remove(<libvulpes:productrod:1>);
-recipes.remove(<libvulpes:productrod:4>);
-recipes.remove(<libvulpes:productrod:6>);
-recipes.remove(<libvulpes:productrod:7>);
+MetalPress.removeRecipe(IEIronRod);
+MetalPress.removeRecipe(IESteelRod);
+MetalPress.removeRecipe(IEAlumRod);
+
+MetalPress.removeRecipe(ARIronRod);
+MetalPress.removeRecipe(ARCopperRod);
+MetalPress.removeRecipe(ARSteelRod);
+MetalPress.removeRecipe(ARTitaniumRod);
+MetalPress.removeRecipe(ARIridiumRod);
+MetalPress.removeRecipe(ARAluminideRod);
 
 
 //***
@@ -84,3 +101,17 @@ recipes.addShaped(SilverRod *2,[[<ore:plateSilver>, null,null],[tool, null,null]
 recipes.addShaped(SteelRod *2,[[<ore:plateSteel>, null,null],[tool, null,null],[null, null,null]]);
 recipes.addShaped(LeadRod *2,[[<ore:plateLead>, null,null],[tool, null,null],[null, null,null]]);
 recipes.addShaped(AlumRod *2,[[<ore:plateAluminum>, null,null],[tool, null,null],[null, null,null]]);
+
+
+//***
+//--- ADD METAL PRESS RECIPES ---///
+//***
+
+MetalPress.addRecipe(IronRod * 2, <ore:ingotIron>, moldRod, 500);
+MetalPress.addRecipe(SteelRod * 2, <ore:ingotSteel>, moldRod, 500);
+MetalPress.addRecipe(CopperRod * 2, <ore:ingotCopper>, moldRod, 500);
+MetalPress.addRecipe(AlumRod * 2, <ore:ingotAluminum>, moldRod, 500);
+
+MetalPress.addRecipe(ARTitaniumRod * 2, <ore:ingotTitanium>, moldRod, 500);
+MetalPress.addRecipe(ARAluminideRod * 2, <ore:ingotTitaniumAluminide>, moldRod, 500);
+MetalPress.addRecipe(ARIridiumRod * 2, <ore:ingotTitaniumIridium>, moldRod, 500);
