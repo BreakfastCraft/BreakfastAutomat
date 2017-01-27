@@ -1,4 +1,4 @@
-print("AdvancedRocketry Recipes start");
+print("AdvancedRocketry recipes START");
 
 var AluminideDust = <advancedrocketry:productdust:0>;
 var TitaniumIridiumDust = <advancedrocketry:productdust:1>;
@@ -22,4 +22,4 @@ furnace.remove(<*>,TitaniumDust);
 furnace.remove(<*>,IridiumDust);
 
 
-print("AdvancedRocketry Recipes finished");
+print("AdvancedRocketry recipes END");

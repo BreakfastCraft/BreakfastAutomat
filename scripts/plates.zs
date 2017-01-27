@@ -1,3 +1,4 @@
+print("PLATE related recipes START");
 
 var IronPlate = <substratum:plate:0>;
 var GoldPlate = <substratum:plate:1>;
@@ -30,7 +31,6 @@ recipes.remove(<ore:plateAluminum>);
 recipes.remove(<ore:plateAluminium>);
 
 
-
 recipes.addShaped(IronPlate,[[<ore:ingotIron>, null,null],[<ore:ingotIron>, null,null],[tool, null,null],]);
 recipes.addShaped(GoldPlate,[[<ore:ingotGold>, null,null],[<ore:ingotGold>, null,null],[tool, null,null],]);
 recipes.addShaped(CopperPlate,[[<ore:ingotCopper>, null,null],[<ore:ingotCopper>, null,null],[tool, null,null],]);
@@ -45,5 +45,8 @@ recipes.addShaped(SilverPlate,[[<ore:ingotSilver>, null,null],[<ore:ingotSilver>
 recipes.addShaped(SteelPlate,[[<ore:ingotSteel>, null,null],[<ore:ingotSteel>, null,null],[tool, null,null],]);
 recipes.addShaped(LeadPlate,[[<ore:ingotLead>, null,null],[<ore:ingotLead>, null,null],[tool, null,null],]);
 recipes.addShaped(AlumPlate,[[<ore:ingotAluminum>, null,null],[<ore:ingotAluminum>, null,null],[tool, null,null],]);
+
+print("Rod related recipes END");
+
 
 

@@ -1,6 +1,6 @@
 import mods.immersiveengineering.MetalPress;
 
-print("Gear related recipes start");
+print("Gear related recipes START");
 
 var TitaniumGear = <libvulpes:productgear:7>;
 var AluminideGear = <advancedrocketry:productgear:0>;
@@ -103,4 +103,4 @@ MetalPress.addRecipe(SilverGear , <ore:ingtoSilver>, moldGear, 500, 4);
 MetalPress.addRecipe(LeadGear , <ore:ingtoLead>, moldGear, 500, 4);
 
 
-print("Gear related recipes end");
+print("Gear related recipes END");

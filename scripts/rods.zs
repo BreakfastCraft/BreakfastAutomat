@@ -1,3 +1,5 @@
+print("Rod related recipes START");
+
 import mods.immersiveengineering.MetalPress;
 
 var ARIronRod =  <libvulpes:productrod:1>;
@@ -115,3 +117,5 @@ MetalPress.addRecipe(AlumRod * 2, <ore:ingotAluminum>, moldRod, 500);
 MetalPress.addRecipe(ARTitaniumRod * 2, <ore:ingotTitanium>, moldRod, 500);
 MetalPress.addRecipe(ARAluminideRod * 2, <ore:ingotTitaniumAluminide>, moldRod, 500);
 MetalPress.addRecipe(ARIridiumRod * 2, <ore:ingotTitaniumIridium>, moldRod, 500);
+
+print("Rod related recipes END");
